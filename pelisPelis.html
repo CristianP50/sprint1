@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleCard.css">
+
+  <title>Movies App</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navegador">
+      <a class="icono-usuario" href="">CristianP</a>
+    </nav>
+    <form id="form">
+      <input type="text" id="search" class="search" placeholder="Search"  input/>
+      <button type="button" id="boton" class="btn-search">Buscar</button>
+    </form>
+  </header>
+
+  <!-- Carousel -------------------------------------   -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/netflix.jpg" class="d-block w-60" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/popcorn.jpg" class="d-block w-60" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/tv.jpg" class="d-block w-60" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!-- ---------------------contenedor de peliculas------------------------- -->
+  <h2>Comedia</h2>
+  <div class="content-movie" id="contentMain">
+    <!-- <template>
+      <div class="movie-card">
+        <div class="color-overlay">
+            <div class="movie-share">
+                <span class="">7</span>
+            </div>
+            <div class="movie-content">
+                <div class="movie-header">
+                    <h1 class="movie-title">Blade Runner</h1>
+                    <h4 class="movie-info">(1982) Sci-Fi, Thriller</h4>
+                </div>
+                <a class="btn btn-outline" href="#"> Watch Trailer</a>
+            </div>
+        </div>
+      </div>
+    </template>  -->
+  </div>
+
+  <h2>Terror</h2>
+  <div class="content-movie">
+  </div>
+
+  <h2>Acción</h2>
+  <div class="content-movie">
+  </div>
+
+<!-- --------------------------------------modal --------------------------->
+
+<!-- <template> -->
+  <div class="light-box" id="lightBox">
+    <img src="" alt="">
+    <div class="contenedor-info">
+    <h3 class="sinopsis">Sinopsis:</h3>
+    <p class="info-pelicula"></p>
+    </div>
+    <span id="btnCerrar"  class="close">&times;</span>
+  </div>
+<!-- </template> -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/get.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

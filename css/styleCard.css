@@ -1,0 +1,110 @@
+/* card pelicula------------------------------------------------------------ */
+
+.content-movie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+
+h2{
+  margin: 100px 0px 20px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.movie-card {
+	background-size: contain;
+	background-repeat: no-repeat;
+    width: 400px;
+	height: 200px;
+    margin-bottom: 10px;
+	border-radius: 8px;
+	box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.25);
+}
+
+/* .movie-card:nth-child(1) {
+	background-image: url(../img/tv.jpg);
+} */
+
+
+.color-overlay {
+	width:100%;
+	height: 100%;
+	border-radius: 8px;
+	background: linear-gradient(to right, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) 60%,rgba(33,33,32,1) 100%);
+	background-blend-mode: multiply;
+}
+
+.movie-share span{
+    background-color:rgba(59, 59, 59, 0.596);
+    position: relative;
+    top: 10px;
+    margin: 7px;
+    padding: 0rem 0.4rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-share span.green{
+    color: lightgreen;
+}
+
+.movie-share span.orange{
+    color: orange;
+}
+
+.movie-share span.red{
+    color: red;
+}
+
+.movie-header {
+  margin-bottom: 1em;
+}
+
+.movie-content {
+	width: 50%;
+	display: block;
+	position:relative;
+	float: right;
+	padding-right: 1em;
+}
+
+.movie-title {
+    color: #ffffff;
+    margin-bottom: .25em;
+    opacity: .75;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.movie-info{
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.movie-desc{
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.btn {
+    position: absolute;
+	background-color: rgba(255,255,255,.2);
+	color: rgb(114, 96, 182);
+    top: 100px;
+}
+
+.btn-outline {
+	background-color: transparent;
+	border: 3px solid #ffffff;
+}
+
+
+.btn-outline:hover {
+	box-shadow: 0px 1px 8px 0px rgba(255, 255, 255, 0.692);
+    color: #ffffff;
+}
+
+

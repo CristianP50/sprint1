@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.carousel{
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-inner{
+    filter:brightness(0.3);
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 100vh;
+    object-position: top;
+    
+}
+
+.contentex{
+    position: absolute;
+    border: 2px solid;
+   
+}
+
+/* formulario---------------------------------------------- */
+
+  .main-form {
+    position: absolute;
+    flex-direction: column;
+    background: rgba(23, 23, 24, 0.726);
+    width: 400px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: bisque;
+    box-shadow: 0 0 10px black;
+    }
+
+.text-box {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font: arial 1.2rem serif;
+
+    margin-top: 10px;
+  }
+  
+  .form-title-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-title {
+    font: bold 2.5rem serif;
+  }
+  
+  .label {
+    margin: 20px;
+    font: bold 1.3rem serif;
+  }
+
+
+  
+  .btn{
+    position:relative;
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+    padding: 10px;
+    font: bold 1rem serif;
+    background: rgba(16, 124, 226, 0.829);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .btn:hover{
+    width: 110px;
+    height: 42px;
+  }
+
+  @media (max-width: 940px) {
+    .carousel-item img{
+        width: 100%;
+        height: 625px;
+        object-fit: cover;
+        object-position: top;
+    }
+  }
+  
