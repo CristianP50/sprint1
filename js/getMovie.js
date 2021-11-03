@@ -47,7 +47,7 @@ function showMovie(movie) {
                     <h4 class="movie-info">${release_date}</h4>
                 </div>
                 <div id="contentBtn">
-                    <button  type="button" class="btn btn-trailer btn-outline" dataset.id="${id}>Watch Trailer</button>
+                    <button  type="button" class="btn btn-trailer btn-outline" >Watch Trailer</button>
 
                     <div class="light-box" id="lightBox">
                     <iframe id="youtube-4095" frameborder="0"
@@ -67,10 +67,7 @@ function showMovie(movie) {
     </div>
     ` 
     innerHTML = '';
-    main.appendChild(movieE1);
-
-    
-    
+    main.appendChild(movieE1); 
   });
 }
 
