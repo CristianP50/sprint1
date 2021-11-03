@@ -49,18 +49,6 @@ function showMovie(movie) {
                 <div id="contentBtn">
                     <button  type="button" class="btn btn-trailer btn-outline" >Watch Trailer</button>
 
-                    <div class="light-box" id="lightBox">
-                    <iframe id="youtube-4095" frameborder="0"
-                        allowfullscreen="1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        title="${title}" width="640" height="360" src="${defaultURL + trailerWait}"></iframe>
-                        <div class="contenedor-info">
-                        <h3 class="sinopsis">Sinopsis:</h3>
-                        <p class="info-pelicula">${overview}</p>
-                        </div>
-                        <span id="btnCerrar" class="close" ">&times;</span>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -71,6 +59,18 @@ function showMovie(movie) {
   });
 }
 
+
+/*<div class="light-box" id="lightBox">
+<iframe id="youtube-4095" frameborder="0"
+ allowfullscreen="1"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+ title="${title}" width="640" height="360" src="${defaultURL + trailerWait}"></iframe>
+<div class="contenedor-info">
+<h3 class="sinopsis">Sinopsis:</h3>
+<p class="info-pelicula">${overview}</p>
+</div>
+<span id="btnCerrar" class="close" ">&times;</span>
+</div>*/
 
 // ---------------------------------busqueda---------------------------
 const btnSearch = document.getElementById('btnSearch');
