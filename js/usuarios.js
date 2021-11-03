@@ -1,5 +1,7 @@
 let form = document.getElementById('form');
-let url = ' http://localhost:3000/usuarios';
+let url = 'http://localhost:3000/usuarios';
+
+// POST-------------------------------------------------
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -19,7 +21,10 @@ form.addEventListener('submit', async (e) => {
         }
     })
 
+    window.location = "../index.html";
     alert('Gracias por registrarse');
+    
+    
 });
 
 

@@ -9,18 +9,19 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styleCard.css">
 
-  <title>Movies App</title>
+  <title>Block Master</title>
 </head>
 
 <body>
 
   <header>
+    <a class="icono-usuario"  href="profile.html"><img src="img/usuarios.png" alt=""></a>
     <nav class="navegador">
-      <a class="icono-usuario" href="">CristianP</a>
+      <a href="index.html" ><img class="logo-Blockmaster" src="img/logo-blockBuster.png" alt="Logo"></a>
     </nav>
     <form id="form">
-      <input type="text" id="search" class="search" placeholder="Search"  input/>
-      <button type="button" id="boton" class="btn-search">Buscar</button>
+      <input type="text" id="search" class="search" placeholder="Search" input/>
+      <button type="button" id="btnSearch" class="btn-search">Buscar</button>
     </form>
   </header>
 
@@ -28,13 +29,13 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/netflix.jpg" class="d-block w-60" alt="...">
+        <img src="img/slide-mulan.png" class="d-block w-60" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/popcorn.jpg" class="d-block w-60" alt="...">
+        <img src="img/slider-raya.png" class="d-block w-60" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/tv.jpg" class="d-block w-60" alt="...">
+        <img src="img/slider-unidos.png" class="d-block w-60" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -48,37 +49,17 @@
   </div>
 
 <!-- ---------------------contenedor de peliculas------------------------- -->
-  <h2>Comedia</h2>
+  <h2>Peliculas</h2>
   <div class="content-movie" id="contentMain">
-    <!-- <template>
-      <div class="movie-card">
-        <div class="color-overlay">
-            <div class="movie-share">
-                <span class="">7</span>
-            </div>
-            <div class="movie-content">
-                <div class="movie-header">
-                    <h1 class="movie-title">Blade Runner</h1>
-                    <h4 class="movie-info">(1982) Sci-Fi, Thriller</h4>
-                </div>
-                <a class="btn btn-outline" href="#"> Watch Trailer</a>
-            </div>
-        </div>
-      </div>
-    </template>  -->
-  </div>
-
-  <h2>Terror</h2>
-  <div class="content-movie">
-  </div>
-
-  <h2>Acción</h2>
-  <div class="content-movie">
   </div>
 
 <!-- --------------------------------------modal --------------------------->
 
-<!-- <template> -->
+<div  id="contentTrailer" onclick="">
+</div>
+
+<!-- <template> 
+<div id="contentTrailer">
   <div class="light-box" id="lightBox">
     <img src="" alt="">
     <div class="contenedor-info">
@@ -87,10 +68,16 @@
     </div>
     <span id="btnCerrar"  class="close">&times;</span>
   </div>
-<!-- </template> -->
+</div>
+ </template> -->
+
+
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/get.js"></script>
+  <script src="js/getMovie.js"></script>
   <script src="js/script.js"></script>
+  
+ 
+  
 
 </body>
 

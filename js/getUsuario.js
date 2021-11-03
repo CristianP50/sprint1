@@ -3,54 +3,32 @@ let url = 'http://localhost:3000/usuarios';
 const form = document.getElementById('formInicio');
 
 const getUsuarios = async() => {
-
+    let nameUsuario = document.getElementById('registradoNameUser').value;
+    let correoUsuario = document.getElementById('registradoEmail').value; 
     try{
     const peticion = await fetch(url);
     const datos = await peticion.json();
-    console.log(datos);
+
+    datos.forEach(resultData => {
+    const {nombreUsuario, correo} = resultData;
+
+        if(nameUsuario === nombreUsuario && correoUsuario === correo){
+            
+            window.location = "../pelisPelis.html";
+        }
+          
+    });
+
     }catch (error){
         alert(error);
     }
 }
 
-    form.addEventListener('submit', (e) => {
-        e.addEventListener();
-        let data = await getUsuarios();
-        data.forEach(ValueUser => {
-            const {nombreUsuario,correo} = ValueUser;
-            console.log(ValueUser);
-        });
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function valueRegistro(ValueUser) {
-    let nameUsuario = document.getElementById('registradoNameUser').value;
-    let correoUsuario = document.getElementById('registradoEmail').value;
-     if (nameUsuario == nombreUsuario && correoUsuario == correo){
-        alert('usuario registrado');
-        }else{
-            alert('debes registrarte');
-        }
-    }
-
-    valueRegistro()
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    getUsuarios();
 });
-showUser();
-getUsuarios();
+
+
+
+

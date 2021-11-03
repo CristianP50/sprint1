@@ -1,15 +1,7 @@
-const btnCerrar = document.getElementById('btnCerrar');
-let btnTrailer = document.getElementById('btnTrailer');
-let contentCard = document.querySelectorAll('.movie');
+let openTrailer = document.querySelectorAll('.btn-trailer');
 
-console.log(contentCard);
+console.log(openTrailer)
 
-contentCard.forEach(openTrailer => {
-        openTrailer.addEventListener('click');
-        console.log('hola');
-});
-
-const openContentTrailer = (e) => {
-    e.target
-    console.log('Hola');
+function closeTrailer(){
+    document.getElementById('lightBox').style.display = 'none';
 }

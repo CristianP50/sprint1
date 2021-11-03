@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleFormulario.css">
+    <title>Perfil</title>
+</head>
+<body>
+
+  <a href="pelisPelis.html" ><img class="logo-Blockmaster" src="img/logo-blockBuster.png" alt="Logo"></a>
+
+    <form class="main-form" id="form">
+        <div class="form-title-cont">
+          <h2 class="form-title">Tu perfil</h2>
+        </div>
+        <label for="name" class="label">Nombre
+          <input type="text" name="name" id="name" class="text-box" placeholder="Nombre" required>
+        </label>
+  
+        <label for="nameUser" class="label">Nombre de Usuario
+          <input type="text" name="nameUser" id="nameUser" class="text-box" placeholder="Nombre de usuario" required>
+        </label>
+  
+        <label for="poke-type" class="label">Correo electrónico
+          <input type="email" name="pokeType" id="email" class="text-box" placeholder="Email" required>
+        </label>
+
+        <label for="id" id="label">
+        <input type="hidden" name="id" id="id">
+        </label>
+        <div>
+        <button type="button" id="btnEditar" class="btn">Editar</button>
+        <button type="button" id="btnEliminar" class="btn">Eliminar</button>
+        <button type="button" id="btnBuscar" class="btn">Buscar</button>
+        </div>
+
+      </form>
+      <script src="js/perfilUser.js"></script>
+</body>
+</html>

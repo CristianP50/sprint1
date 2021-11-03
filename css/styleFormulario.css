@@ -1,11 +1,11 @@
   body{
-    background: #313164;
+    background: rgb(34, 31, 31);
   }
 
   .main-form {
     flex-direction: column;
     background: rgba(197, 197, 197, 0.911);
-    top: 160px;
+    top: 100px;
     width: 400px;
     height: 450px;
     align-items: center;
@@ -13,7 +13,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px black;
     display: flex;
-    margin: 100px auto;
+    margin: 45px auto;
     }
 
 .text-box {
