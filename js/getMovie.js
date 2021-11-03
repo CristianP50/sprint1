@@ -1,4 +1,4 @@
-const trailerI = 'https://api.themoviedb.org/3/movie/297762/videos?api_key=f3cb710ccf9761e78278185874899538&language=en-US';
+//const trailerI = 'https://api.themoviedb.org/3/movie/297762/videos?api_key=f3cb710ccf9761e78278185874899538&language=en-US';
 const defaultURL = 'https://www.youtube.com/embed/';
 const API_TOP = 'https://api.themoviedb.org/3/movie/top_rated?api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=';
 const MENOS_POP = '/discover/movie?sort_by=popularity.asc';
