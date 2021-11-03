@@ -14,6 +14,7 @@ const getUsuarios = async() => {
 
         if(nameUsuario === nombreUsuario && correoUsuario === correo){
             
+
             window.location = "../sprint/pelisPelis.html";
         }
           
