@@ -75,12 +75,16 @@ header img{
 }
 
 /* ------------------------------------------modal------------------------------ */
+#contentTrailer{
+  visibility: hidden;
+  
+}
 
 .light-box{
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(14, 12, 12, 0.664);
   transition: transform .3s ease-in-out;
   width: 100%;
   height: 100vh;
@@ -88,10 +92,10 @@ header img{
   justify-content: center;
   align-items: center;
   transform: scale(1);
-  display: none;
+  display: flex;
 }
 
-.light-box img{
+.light-box #trailerWindow{
   left: 12vw;
   height: 50vh;
   width: 40vw;
@@ -114,7 +118,7 @@ header img{
 .info-pelicula{
   font-size: 1em;
   color: #ffffff;
-  font: bold 1rem serif;
+  font: arial 1rem serif;
   text-align: start; 
 }
 

@@ -1,4 +1,5 @@
-//const trailerI = 'https://api.themoviedb.org/3/movie/297762/videos?api_key=f3cb710ccf9761e78278185874899538&language=en-US';
+const trailerI = 'https://api.themoviedb.org/3/movie/';
+const trailerF = '/videos?api_key=3fd2be6f0c70a2a598f084ddfb75487c&language=en-US';
 const defaultURL = 'https://www.youtube.com/embed/';
 const API_TOP = 'https://api.themoviedb.org/3/movie/top_rated?api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=';
 const MENOS_POP = '/discover/movie?sort_by=popularity.asc';
@@ -7,16 +8,14 @@ const IMG_PATH = `https://image.tmdb.org/t/p/w1280`;
 const SEARCH_URL = 'http://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
 
 const main = document.getElementById('contentMain');
-/*const getTrailer = async() => {
-    try{
-    const incluir = await fetch(trailerI);
-    const trailers = await incluir.json();
-    const datos =  trailers.results;
-    console.log(datos);
-    }catch (error){
-        alert(error);
-    }
-}*/
+
+const trailer = async (id) => {
+    const response = await fetch(trailerI + id + trailerF);
+    const datos = await response.json();
+    const { results } = datos;
+    const key = results[0].key;
+    return key
+}
 
 const getMovie = async(url) => {
     try{
@@ -31,10 +30,11 @@ const getMovie = async(url) => {
 
 function showMovie(movie) {
     
-  movie.forEach(movie => {
-    const{id, title,poster_path,vote_average,overview,release_date, trailerWait} = movie
+  movie.forEach(async(movie) => {
+    const{id,title,poster_path,vote_average,overview,release_date} = movie
+    const trailerWait = await trailer(id);
     const movieE1 = document.createElement('div');
-
+    
     movieE1.innerHTML = ` 
     <div class="movie-card" style="background-image: url(${IMG_PATH + poster_path});">
         <div class="color-overlay">
@@ -47,8 +47,7 @@ function showMovie(movie) {
                     <h4 class="movie-info">${release_date}</h4>
                 </div>
                 <div id="contentBtn">
-                    <button  type="button" class="btn btn-trailer btn-outline" >Watch Trailer</button>
-
+                    <button linkYputube="${defaultURL + trailerWait}" overview="${overview}" titulo="${title}" identificador="${id}" type="button" class="btn btn-trailer btn-outline">Watch Trailer</button>
                 </div>
             </div>
         </div>
@@ -58,19 +57,6 @@ function showMovie(movie) {
     main.appendChild(movieE1); 
   });
 }
-
-
-/*<div class="light-box" id="lightBox">
-<iframe id="youtube-4095" frameborder="0"
- allowfullscreen="1"
- allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
- title="${title}" width="640" height="360" src="${defaultURL + trailerWait}"></iframe>
-<div class="contenedor-info">
-<h3 class="sinopsis">Sinopsis:</h3>
-<p class="info-pelicula">${overview}</p>
-</div>
-<span id="btnCerrar" class="close" ">&times;</span>
-</div>*/
 
 // ---------------------------------busqueda---------------------------
 const btnSearch = document.getElementById('btnSearch');
@@ -114,31 +100,22 @@ function getClassByRate(vote) {
 }
 // ----------------------------------------modal---------------------
 
+const btnOpenTrailer = document.querySelector('.btn-trailer');
+const detailsPage = document.querySelector('#contentTrailer');
+const btnClose = document.getElementById('btnCerrar');
 
-/*main.addEventListener("click", async(e) => {
-    e.preventDefault();
-    let resp = await fetch(API_URL);
-    let data = await resp.json();
-    let movies = data.results;
-    let idTarget = e.target.dataset.id;
-    console.log(idTarget);
-    body.style.overflow = "hidden";
-    detailsPage.style.display = "flex";
-    movies.forEach((movie) => {
-      const { id, title, poster_path, overview, release_date } = movie;
-      if (id == idTarget) {
-        detailsPage.innerHTML = "";
-        templateDetails.getElementById("card-img").setAttribute("src", IMG_PATH + poster_path);
-        templateDetails.getElementById("card-title").textContent = title;
-        templateDetails.getElementById("close-detail").textContent = `X`;
-        templateDetails.getElementById("card-description").textContent = overview;
-        templateDetails.getElementById("card-categories").textContent = `Year: ${release_date}`;
-        const clone = templateDetails.cloneNode(true);
-        fragment.appendChild(clone);
-        detailsPage.appendChild(fragment);
-      }
-    });
-  });*/
+btnClose.addEventListener('click', ()=>{
+    detailsPage.style.visibility = 'hidden'
+});
+
+main.addEventListener('click', async(e) =>{
+    e.preventDefault(); 
+    if(e.target.matches('.btn-trailer')){
+        detailsPage.style.visibility = 'visible'
+        document.querySelector('.info-pelicula').textContent = e.target.getAttribute('overview');
+        document.querySelector('#trailerWindow').src = e.target.getAttribute('linkYputube');
+    }
+  })
 
 
 // --------------------scroll infinito-----------------------
@@ -158,7 +135,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 });
 
 window.addEventListener('scroll', onScroll)
-
 
 
 getClassByRate();

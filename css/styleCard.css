@@ -23,10 +23,6 @@ h2{
 	box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.25);
 }
 
-/* .movie-card:nth-child(1) {
-	background-image: url(../img/tv.jpg);
-} */
-
 
 .color-overlay {
 	width:100%;
@@ -106,73 +102,3 @@ h2{
 	box-shadow: 0px 1px 8px 0px rgba(255, 255, 255, 0.692);
     color: #ffffff;
 }
-
-/* ------------------------------------------modal------------------------------ 
-
-.light-box{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    transition: transform .3s ease-in-out;
-    width: 100%;
-    height: 100vh;
-    z-index: 1010;
-    justify-content: center;
-    align-items: center;
-    transform: scale(1);
-    display: none;
-  }
-  
-  .light-box img{
-    left: 12vw;
-    height: 50vh;
-    width: 40vw;
-  }
-  
-  .contenedor-info{
-    padding-left: 10px;
-    width: 50%;
-    height: 200px;
-    overflow-wrap: break-word;
-  }
-  .sinopsis{
-    position: relative;
-    font-weight: 400;
-    color: #5653ff;
-    bottom: 50px;
-    font: bold 2.5rem serif;
-  }
-  
-  .info-pelicula{
-    font-size: 1em;
-    color: #ffffff;
-    font: bold 1rem serif;
-    text-align: start; 
-  }
-  
-  .light-box:target{
-    transform: scale(1);
-  }
-  
-  .close{
-    display: block;
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    font-size:30px;
-    font-weight: bold;
-    text-decoration: none;
-    color:#ffffff;
-  }
-  
-  .close:hover{
-  color:#7f8c8d;
-  text-decoration: none;
-  cursor: pointer;
-  }
-
- #contentBtn:hover .light-box{
-    display: flex;
-} 
-*/
